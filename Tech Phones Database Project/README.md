@@ -61,7 +61,7 @@ SELECT
 
 FROM
 
- Department d
+    Department d
 
 GROUP BY
 
