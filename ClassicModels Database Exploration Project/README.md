@@ -18,7 +18,7 @@ Window Functions: Leveraging window functions such as ROW_NUMBER, RANK, DENSE_RA
 Subqueries: Employing subqueries to break down complex problems into manageable components, enhancing query readability and efficiency.
 
 
-Example Queries
+**Example Queries**
 
 --Compare sales performance across regions for different product lines.
 SELECT 
