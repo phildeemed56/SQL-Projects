@@ -40,7 +40,8 @@ Leveraging CTEs to create temporary result sets, facilitating recursive queries 
 **Example Queries**
 
 
-# Retrieve Department Name and the Total Sales They Make
+**Retrieve Department Name and the Total Sales They Make**
+
 SELECT
     d.DepartmentName,
     SUM(d.sales) AS TotalSales
@@ -50,7 +51,8 @@ GROUP BY
     d.DepartmentName
 
 
-# Use a Subquery to Retrieve The Details of Employees Who Earn More Than The Average Salary
+**Use a Subquery to Retrieve The Details of Employees Who Earn More Than The Average Salary**
+
 SELECT *
 FROM 
 	Employees e
@@ -60,7 +62,8 @@ JOIN
 		ON e.Salary > sal.AverageSalary;
   
 
-# Use CTE to Retrieve Employees Who Earn More Than The Average Salary
+**Use CTE to Retrieve Employees Who Earn More Than The Average Salary**
+
 WITH average_salary (average_sal) AS
 	(SELECT AVG(e.Salary) FROM Employees e)
 SELECT e.FirstName, e.LastName, e.Salary, average_sal
@@ -68,7 +71,8 @@ FROM Employees e, average_salary
 WHERE e.Salary > average_sal
 
 
-# Use Window Function, OVER And Partition By To Retrieve Details of IT Employees And The Average Salary In IT Department
+**Use Window Function, OVER And Partition By To Retrieve Details of IT Employees And The Average Salary In IT Department**
+
 SELECT 
     e.EmployeeID,
     e.FirstName,
