@@ -74,7 +74,7 @@ SELECT *
 
 FROM 
 
- Employees e
+    Employees e
 
 JOIN 
 
@@ -88,15 +88,20 @@ JOIN
 **Use CTE to Retrieve Employees Who Earn More Than The Average Salary**
 
 
-WITH average_salary (average_sal) AS
+WITH 
+    average_salary (average_sal) AS
 
- (SELECT AVG(e.Salary) FROM Employees e)
+    (SELECT AVG(e.Salary) FROM Employees e)
 
-SELECT e.FirstName, e.LastName, e.Salary, average_sal
+SELECT 
+    e.FirstName, e.LastName, e.Salary, average_sal
 
-FROM Employees e, average_salary 
+FROM 
+    
+    Employees e, average_salary 
 
-WHERE e.Salary > average_sal
+WHERE 
+    e.Salary > average_sal
 
 
 **Use Window Function, OVER And Partition By To Retrieve Details of IT Employees And The Average Salary In IT Department**
